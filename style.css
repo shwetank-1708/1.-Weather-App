@@ -1,0 +1,152 @@
+:root {
+  --maincolor: #1aede7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  /* background-color: red; */
+  /* border: 2px solid green; */
+  align-items: center;
+  justify-content: center;
+  background-color: var(--maincolor);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  /* border: 2px solid red; */
+  background-color: white;
+  border-radius: 40px;
+  padding: 40px;
+}
+
+#container #input {
+  margin: 20px;
+  /* border: 2px solid red; */
+}
+
+#container #input input {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 25px;
+  border: 2px solid var(--maincolor);
+}
+
+#container #input button {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid var(--maincolor);
+  background: var(--maincolor);
+  cursor: pointer;
+  font-weight: bolder;
+  transition: 0.4s;
+}
+
+#container #input button:hover {
+  color: white;
+}
+
+#container .error {
+  margin-bottom: 20px;
+  display: none;
+}
+
+.weather_details {
+  display: none;
+}
+
+.weather_details #primaryDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.weather_details #primaryDetails img {
+  width: 200px;
+}
+
+.weather_details #primaryDetails h1,
+h2 {
+  padding: 5px;
+}
+
+.weather_details .details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+  width: 100%;
+}
+
+.weather_details .details .secondaryDetails {
+  width: 45%;
+  display: flex;
+  margin-top: 10px;
+  /* border: 2px solid red; */
+}
+
+.weather_details .details .secondaryDetails img {
+  width: 50px;
+}
+
+.weather_details .details .secondaryDetails div {
+  margin-left: 10px;
+}
+
+.weather_details .details .secondaryDetails p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (max-width: 2000px) {
+  #container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  #container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  #container {
+    width: 100%;
+  }
+
+  #container #input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .weather_details .details .secondaryDetails {
+    width: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .weather_details .details .secondaryDetails {
+    width: 100%;
+  }
+}
