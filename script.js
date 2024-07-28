@@ -50,4 +50,5 @@ async function checkWeather(city) {
 
 button.addEventListener("click", function () {
   checkWeather(searchBox.value);
+  document.querySelector("#searchBox").value = "";
 });
