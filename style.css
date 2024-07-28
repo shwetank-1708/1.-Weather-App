@@ -146,6 +146,10 @@ h2 {
 }
 
 @media (max-width: 450px) {
+  .weather_details #primaryDetails img {
+    width: 150px;
+  }
+
   .weather_details .details .secondaryDetails {
     width: 100%;
   }
